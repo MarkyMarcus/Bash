@@ -10,9 +10,8 @@ LIST=/usr/share/dict/propernames
 # Get the count from the file
 COUNT=`cat $LIST | wc -l | tr -d \ `
 
-# randomly pick a line in the file 
+# Randomly pick a line in the file 
 PICK=$(((($RANDOM % $COUNT))+1))
 
-#execution
-
+# Execution
 head -$PICK $LIST | tail -1
